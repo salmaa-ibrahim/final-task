@@ -17,12 +17,11 @@ function ProductCard(prop){
                         <span >{prop.category}</span>
                         <div className="priceInShop">
                             <label>{prop.price} $</label>
-                            <p className="priceBefore">Rp 3.500.000</p>
+                            <p className="priceBefore">30.5 $</p>
                         </div>
                     </div>
                     </Link>
         </div>
-                   
         </>
     )
 }

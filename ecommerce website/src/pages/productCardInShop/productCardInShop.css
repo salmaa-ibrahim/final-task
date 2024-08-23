@@ -101,3 +101,16 @@
     text-decoration: line-through;
     color: #B0B0B0;
 }
+
+@media only screen and (max-width: 425px) {
+    .productDetailsInShop h1 {
+        font-size: 13px;
+    }
+    
+    .productImgInShop {
+        height: 270px;
+    }
+    .productDetailsInShop span {
+        font-size: 13px;
+    }
+}
