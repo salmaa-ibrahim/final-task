@@ -1,0 +1,47 @@
+.features {
+    background-color: #FAF3EA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 55.33px;
+    flex-wrap: wrap;
+    height: 250px;
+    width: 100%;
+    margin-top: 60px;
+}
+
+.feature {
+    display: flex;
+    column-gap: 10px;
+    padding: 10px;
+}
+
+.featureImg>img {
+    width: 60px;
+    height: 60px;
+}
+
+.featureName p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.featureName span {
+    font-size: 20px;
+    color: #898989;
+}
+
+@media only screen and (max-width: 1024px) {
+    .features {
+        justify-content: space-around;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .features {
+        height: auto;
+        justify-content: flex-start;
+        padding: 20px;
+    }
+
+}

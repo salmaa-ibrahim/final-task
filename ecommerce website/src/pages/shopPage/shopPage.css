@@ -1,0 +1,76 @@
+.shopPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 17px;
+    width: 100%;
+}
+
+.shopHeader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2px;
+    justify-content: center;
+    align-items: center;
+}
+
+.center h1{
+    font-size: 48px;
+}
+.center span{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.shopHeader img{
+    height: 316px;
+    width: 100%;
+}
+
+.shopContent{
+    /* background-color: #B0B0B0; */
+    /* width: 85.83%; */
+    width: 100%;
+    /* display: grid;
+    grid-template-columns: auto auto auto auto; */
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 32px;
+    row-gap: 40px;
+    justify-content: center;
+}
+
+.shopFooter{
+    display: flex;
+    column-gap:38px ;
+}
+
+.shopFooter button{
+    border: none;
+    background-color: rgb(228, 225, 225);
+    border-radius: 7px;
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 5px;
+}
+
+
+.shopFooter button:hover{
+    cursor: pointer;
+    background-color: #B88E2F;
+}
