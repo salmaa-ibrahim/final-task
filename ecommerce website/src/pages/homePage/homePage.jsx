@@ -2,9 +2,9 @@ import "./homepage.css"
 
 function HomePage(){
     return(
-        <>
-        hhh
-        </>
+        <h1>
+        Home Page
+        </h1>
     )
 }
 

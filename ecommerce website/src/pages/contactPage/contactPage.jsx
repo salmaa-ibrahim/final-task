@@ -2,7 +2,7 @@ import "./contactPage.css"
 
 function ContactPage(){
     return(
-        <></>
+        <h1>Contact Page</h1>
     )
 }
 
