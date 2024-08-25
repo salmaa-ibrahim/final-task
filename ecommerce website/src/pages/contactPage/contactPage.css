@@ -45,13 +45,16 @@
     background-color: seagreen;
     width: 80%;
     display: flex;
-    column-gap: 157px;
+    justify-content: space-between;
+    /* column-gap: 157px; */
 }
 
 .information{
+    background-color: yellow;
     display: flex;
     flex-direction: column;
     row-gap:42px ;
+    width: 30%;
 }
 .informationBlock{
     display: flex;
@@ -82,7 +85,7 @@
         row-gap: 57px;
     }
 }
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 768px) {
 
     .conactContent{
         row-gap: 80px;
