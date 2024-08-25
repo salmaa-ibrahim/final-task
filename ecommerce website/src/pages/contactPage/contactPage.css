@@ -42,7 +42,6 @@
 }
 
 .contactBottom{
-    background-color: seagreen;
     width: 80%;
     display: flex;
     justify-content: space-between;
@@ -50,7 +49,6 @@
 }
 
 .information{
-    background-color: yellow;
     display: flex;
     flex-direction: column;
     row-gap:42px ;
@@ -99,6 +97,9 @@
         font-size: 30px;
     }
      
+    .information{
+        width: 100%;
+    }
 }
 
 
