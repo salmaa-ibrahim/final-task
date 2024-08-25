@@ -1,6 +1,6 @@
 import "./shopPage.css"
 // import { Link } from "react-router-dom"
-import ShopImg from "/images/Rectangle 1.jpg"
+import ShopImg from "/images/Untitled design/background2.png";
 import ProductCard from "../productCardInShop/productCardInShop"
 import { useEffect, useState } from 'react'
 

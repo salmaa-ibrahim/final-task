@@ -1,5 +1,5 @@
 import "./contactPage.css";
-import ShopImg from "/images/Rectangle 1.jpg";
+import ShopImg from "/images/Untitled design/background2.png";
 import addressImg from "/images/address.svg";
 import phoneImg from "/images/bxs_phone.svg";
 import timeImg from "/images/bi_clock-fill.svg";

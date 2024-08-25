@@ -30,7 +30,7 @@
     flex-wrap: wrap;
 }
 .eachCategory{
-    width: 300px;
+    width: 290px;
     height: 530px;
     display: flex;
     flex-direction: column;
@@ -50,7 +50,8 @@
 }
 
 .categoryImg img {
-    width: 100px;
+    width: 100%;
+    height: 100%;
 }
 
 .eachCategory:hover{
