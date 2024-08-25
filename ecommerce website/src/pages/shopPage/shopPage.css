@@ -6,7 +6,7 @@
     width: 100%;
 }
 
-.shopHeader{
+.Header{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,7 +35,7 @@
     font-weight: 400;
 }
 
-.shopHeader img{
+.Header img{
     height: 316px;
     width: 100%;
 }
@@ -79,8 +79,8 @@
 
 @media only screen and (max-width: 425px) {
     .shopFooter button{
-        width: 40px;
-        height: 40px;
+        width: 65px;
+        height: 45px;
     }
 }
 

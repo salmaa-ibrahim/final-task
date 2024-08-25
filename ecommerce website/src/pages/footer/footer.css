@@ -97,6 +97,21 @@
     margin: 30px 0px;
 }
 
+@media only screen and (max-width: 1024px) {
+    .links {
+        font-size: 16px;
+    }
+    
+    .footerTop {
+        column-gap: 100px;
+    }
+
+    .links{
+        font-size: 100%;
+    }
+
+
+    }
 
 @media only screen and (max-width: 768px) {
     .footer {
@@ -221,3 +236,4 @@
     }
 
 }
+

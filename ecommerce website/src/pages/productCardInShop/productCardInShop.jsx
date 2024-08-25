@@ -3,7 +3,6 @@ import { Link } from "react-router-dom"
 function ProductCard(prop){
     return(
         <>
-        {/*  */}
         <div className="productCard">
                     <div className="productImgInShop">
                         <img className="cardImage" src={prop.image} alt="" />
@@ -13,7 +12,9 @@ function ProductCard(prop){
                     </div>
                     <Link to={`/product/${prop.id}`}>
                     <div className="productDetailsInShop">
-                        <h1>{prop.title}</h1>
+                        <div className="box">
+                            <h1>{prop.title}</h1>
+                        </div>
                         <span >{prop.category}</span>
                         <div className="priceInShop">
                             <label>{prop.price} $</label>

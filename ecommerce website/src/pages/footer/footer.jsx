@@ -21,7 +21,7 @@ function Footer(){
                         <p>Returns</p>
                         <p>privacy Policy</p>
                     </div>
-                    <div className="columnThree">
+                    <div className="columnThree columnOneandTwo">
                         <p className="links">Newsletter</p>
                         <div className="subscribeDiv">
                             <input placeholder="Enter Your Email Address" type="text"/>

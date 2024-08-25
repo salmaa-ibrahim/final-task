@@ -9,7 +9,7 @@ function ShopPage(){
 
     useEffect(()=>{
         function AllProducts(){
-            fetch("https://fakestoreapi.com/products").then(
+            fetch("https://fakestoreapi.com/products?sort=desc").then(
                 (respose)=>{return respose.json()}
             ).then((finalResult)=>{setArrayOfAllProducts(finalResult)})
         }
@@ -18,7 +18,7 @@ function ShopPage(){
 
     return(
         <div className="shopPage">
-            <div className="shopHeader">
+            <div className="Header">
                 <img src={ShopImg} alt="#" />
                 <div className="center">
                     <h1>Shop</h1>

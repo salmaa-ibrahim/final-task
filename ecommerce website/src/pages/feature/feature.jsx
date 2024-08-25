@@ -37,7 +37,7 @@ function Feature(){
                     </div>
                 </div>
 
-                <div className="feature">
+                <div className="feature four">
                     <div className="featureImg">
                         <img src={Img4} alt="" />
                     </div>
