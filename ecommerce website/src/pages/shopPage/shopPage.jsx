@@ -1,6 +1,7 @@
 import "./shopPage.css"
 // import { Link } from "react-router-dom"
-import ShopImg from "/images/Untitled design/background2.png";
+import HeaderImage from "../../../public/images/Untitled design/page.png";
+// import ShopImg from "/images/Untitled design/B2.png"
 import ProductCard from "../productCardInShop/productCardInShop"
 import { useEffect, useState } from 'react'
 
@@ -9,7 +10,7 @@ function ShopPage(){
 
     useEffect(()=>{
         function AllProducts(){
-            fetch("https://fakestoreapi.com/products?sort=desc").then(
+            fetch("https://fakestoreapi.com/products").then(
                 (respose)=>{return respose.json()}
             ).then((finalResult)=>{setArrayOfAllProducts(finalResult)})
         }
@@ -19,7 +20,7 @@ function ShopPage(){
     return(
         <div className="shopPage">
             <div className="Header">
-                <img src={ShopImg} alt="#" />
+                <img src={HeaderImage} alt="#" />
                 <div className="center">
                     <h1>Shop</h1>
                     <p>Home  &gt; <span>Shop</span></p>

@@ -1,5 +1,5 @@
 import "./contactPage.css";
-import ShopImg from "/images/Untitled design/background2.png";
+import HeaderImage from "../../../public/images/Untitled design/page.png";
 import addressImg from "/images/address.svg";
 import phoneImg from "/images/bxs_phone.svg";
 import timeImg from "/images/bi_clock-fill.svg";
@@ -9,7 +9,7 @@ function ContactPage() {
     return (
         <div className="contactPage">
             <div className="Header">
-                <img src={ShopImg} alt="#" />
+                <img src={HeaderImage} alt="#" />
                 <div className="center">
                     <h1>Contact</h1>
                     <p>
