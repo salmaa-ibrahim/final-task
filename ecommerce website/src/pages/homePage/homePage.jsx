@@ -1,68 +1,56 @@
 import "./homepage.css";
 import HomwHeaderImage from "/images/Untitled design/homee.png"
-// import { useEffect, useState } from "react";
-// import LogoImg from "/images/Meubel House_Logos-05.png"
 import { Link } from "react-router-dom"
+
 
 function HomePage() {
 
-    const arrayofimg = [
+    const arrayofcategories = [
         {
             image: "/images/Untitled design/1.png",
-            title: "electronics",
+            category: "electronics",
+            title:"electronics",
             id: 1
         },
         {
             image: "/images/Untitled design/4.png",
-            title: "jewelery",
+            category: "jewelery",
+            title:"jewelery",
             id: 2
         }
         ,
         {
             image: "/images/Untitled design/3.png",
-            title: "men's clothing",
+            category: "mensclothing",
+            title:"men's clothing",
             id: 3
         }
         ,
         {
             image: "/images/Untitled design/2.png",
-            title: "women's clothing",
+            category: "womensclothing",
+            title:"women's clothing",
             id: 4
         }
     ]
-
-    // const [category, setcategory] = useState([]);
-
-    // useEffect(() => {
-    //     function Allcategory() {
-    //         fetch("https://fakestoreapi.com/products/categories")
-    //             .then((respose) => {
-    //                 return respose.json();
-    //             })
-    //             .then((finalResult) => {
-    //                 setcategory(finalResult);
-    //             });
-    //     }
-    //     Allcategory();
-    // }, []);
 
     return (
         <div className="homePage">
             <div className="Header">
                 <img src={HomwHeaderImage} alt="" />
             </div>
-            <div className="CategoriesDiv">
+            <div className="CategoriesDiv" >
                 <h1>Categories</h1>
                 <div className="Categories">
-                    {arrayofimg.map((category) => {
+                    {arrayofcategories.map((item) => {
                         return (
                             <>
-                                <Link to={"/shop"}>
-                                    <div className="eachCategory">
+                                <Link to={`/shop/${item.category}`}>
+                                    <div className="eachCategory" >
                                         <div className="categoryImg">
-                                            <img src={category.image} alt="#" />
+                                            <img src={item.image} alt="#" />
                                         </div>
-                                        <p>{category.title}</p>
+                                        <p>{item.title}</p>
                                     </div>
                                 </Link>
                             </>
@@ -73,5 +61,6 @@ function HomePage() {
         </div>
     );
 }
+
 
 export default HomePage;

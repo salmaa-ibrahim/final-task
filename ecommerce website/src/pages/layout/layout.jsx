@@ -1,9 +1,9 @@
 import "./layout.css";
 import { Outlet, Link } from "react-router-dom";
 import LogoImg from "/images/Meubel House_Logos-05.png"
-import CartImg from "/images/Vector.png"
 import Feature from "../feature/feature";
 import Footer from "../footer/footer";
+import Cart from "../cart/cart";
 function Layout() {
     return (
         <>
@@ -25,9 +25,7 @@ function Layout() {
                     </li>
                 </ul>
             </nav>
-            <div className="cart">
-                <img src={CartImg} alt="#" />
-            </div>
+            <Cart></Cart>
         </div>
         <Outlet />
         <Feature></Feature>

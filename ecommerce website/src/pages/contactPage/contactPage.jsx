@@ -1,5 +1,5 @@
 import "./contactPage.css";
-import HeaderImage from "../../../public/images/Untitled design/page.png";
+import HeaderImage from "/images/Untitled design/page.png";
 import addressImg from "/images/address.svg";
 import phoneImg from "/images/bxs_phone.svg";
 import timeImg from "/images/bi_clock-fill.svg";

@@ -41,6 +41,27 @@ li a:hover{
     color: rgb(66, 65, 65);
 }
 
+
+
+@media only screen and (max-width: 768px) {
+    .logo a {
+        font-size: 22px;
+        margin-right: 25px;
+    }
+
+    ul{
+        width: 100%;
+        column-gap: 20px;
+    }
+
+    .navbar{
+        column-gap: 10px;
+        padding: 20px 15px;
+    }
+
+}
+
+
 @media only screen and (max-width: 425px) {
     .navbar{
         /* padding: 25px 20px 25px 20px; */
@@ -68,7 +89,7 @@ li a:hover{
         font-size: 13px;
     }
 
-    .cart img{
+    .cartIcon img{
         width: 20px;
         margin-left: 16px;
     }
@@ -80,27 +101,50 @@ li a:hover{
         margin-right: 25px;
     }
 
-}
-
-
-@media only screen and (max-width: 768px) {
-    .logo a {
-        font-size: 22px;
-        margin-right: 25px;
+    .navbar{
+        padding: 15px 10px;
+    }
+    .logo img{
+        width: 30px;
     }
 
-    ul{
-        width: 100%;
-        column-gap: 20px;
+    .logo a {
+        font-size: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 320px) {
+    .logo a {
+        font-size: 20px;
+        margin-right: 0px;
     }
 
     .navbar{
-        column-gap: 10px;
-        padding: 20px 15px;
+        padding: 15px 10px;
+    }
+    .logo img{
+        width: 25px;
     }
 
+    .logo a {
+        font-size: 18px;
+    }
 
+    ul{
+        column-gap: 10px;
+    }
+
+    .cartIcon img{
+        margin-left: 0px;
+    }
+
+    
+    .cartIcon{
+        width: 30px;
+    }
 
 }
+
 
 

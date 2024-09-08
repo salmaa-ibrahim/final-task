@@ -1,0 +1,184 @@
+.cartPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 72px;
+}
+
+.cartPageContent {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+table {
+    width: 65%;
+}
+
+.disapeIconeInTable {
+    color:transparent;
+}
+
+td,
+th,
+tr {
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+tr {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+th {
+    background-color: #F9F1E7;
+    height: 55px;
+}
+
+
+
+.imageCell {
+    width: 105px;
+}
+
+.imageCell img {
+    width: 105px;
+    height: 105px;
+    border-radius: 10px;
+}
+
+.color {
+    color: #9F9F9F;
+}
+
+.basket img {
+    width: 21px;
+    cursor: pointer;
+}
+
+.cartTotal {
+    width: 30%;
+    height: 100%;
+    background-color: #F9F1E7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    row-gap: 40px;
+}
+
+.CartTotalPrice {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.smallTotalDiv {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.smallTotalDiv p {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.smallTotalDiv label {
+    font-size: 16px;
+    color: #9F9F9F;
+}
+
+.smallTotalDiv span {
+    font-size: 16px;
+    color: #B88E2F;
+    font-weight: 600;
+}
+
+.cartTotal button {
+    width: 222px;
+    height: 59px;
+    border: 1px black solid;
+    background-color: transparent;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.cartTotal button:hover {
+    background-color: #e7dede;
+}
+
+@media only screen and (max-width:768px) {
+    .cartPageContent {
+        flex-direction: column;
+        row-gap: 70px;
+        align-items: center;
+    }
+
+    table {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+    }
+
+    tr {
+        display: flex;
+        flex-direction: column;
+    }
+
+    td,
+    th {
+        text-align: start;
+        height: 90px;
+        background-color: transparent;
+    }
+    
+
+    .imageCell img {
+        width: 80px;
+        height: 80px;
+        border-radius: 10px;
+    }
+
+    .cartTotal {
+        width: 100%;
+        height: auto;
+    }
+
+    .cartTotal button {
+        width: 100%;
+    }
+
+}
+
+
+@media only screen and (max-width:425px) {
+
+
+    table {
+        width: 100%;
+        column-gap: 20px;
+    }
+
+    td,
+    th {
+        height: 70px;
+        font-size: 14px;
+
+    }
+
+
+    th{
+        font-size: 14px;
+    }
+
+    .imageCell img {
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+    }
+
+}

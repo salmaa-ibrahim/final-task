@@ -1,16 +1,13 @@
-import "./shopPage.css"
-// import { Link } from "react-router-dom"
 import HeaderImage from "/images/Untitled design/page.png";
-// import ShopImg from "/images/Untitled design/B2.png"
 import ProductCard from "../productCardInShop/productCardInShop"
 import { useEffect, useState } from 'react'
 
-function ShopPage(){
+function Women(){
     
     const [arrayOfAllProducts , setArrayOfAllProducts] = useState([])
     useEffect(()=>{
         function AllProducts(){
-            fetch("https://fakestoreapi.com/products").then(
+            fetch("https://fakestoreapi.com/products/category/women's%20clothing").then(
                 (respose)=>{return respose.json()}
             ).then((finalResult)=>{setArrayOfAllProducts(finalResult)})
         }
@@ -54,7 +51,7 @@ function ShopPage(){
     )
 }
 
-export default ShopPage
+export default Women
 
 
 
