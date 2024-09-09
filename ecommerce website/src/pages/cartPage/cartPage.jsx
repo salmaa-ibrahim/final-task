@@ -1,17 +1,35 @@
 import "./cartPage.css"
 import HeaderImage from "/images/Untitled design/page.png";
-import imageee from "../../../public/images/Untitled design/3.png"
-import basket from "../../../public/images/share/basket.svg"
+import basket from "/images/share/basket.svg"
 import { useState } from "react";
 function CartPage() {
+    const [arrayOfProducts, setArrayOfProducts] = useState([
+        {
+            id: 1,
+            productImg: "/images/Untitled design/3.png",
+            productName: "t-shirt",
+            amount: "4",
+            price: "200$"
+        },
+        {
+            id: 2,
+            productImg: "/images/Untitled design/2.png",
+            productName: "pants",
+            amount: "2",
+            price: "120$"
+        },
+    ])
 
-    const [active, setActive] = useState(false);
-    function closeItem() {
-        setActive(true);
+
+    function deletePost(event) {
+        console.log(event.target.id)
+        const newArrayAfterDelete = arrayOfProducts.filter((item) => {
+            return item.id != event.target.id
+        })
+
+        setArrayOfProducts(newArrayAfterDelete)
     }
-    // function openItem() {
-    //     setActive(false);
-    // }
+
     return (
         <div className="cartPage">
             <div className="Header">
@@ -33,32 +51,20 @@ function CartPage() {
                         <th>Subtotal</th>
                         <th className="disapeIconeInTable">icone</th>
                     </tr>
-                    <tr id="responsive" className={active ? "delete" : "keep"}>
-                        <td className="imageCell"> <img src={imageee} alt="" /></td>
-                        <td className="color">productName</td>
-                        <td className="color">200$</td>
-                        <td className="quantity">3</td>
-                        <td>200$</td>
-                        <td className="basket"><img src={basket} onClick={closeItem}/></td>
-                    </tr>
-
-                    <tr id="responsive" >
-                        <td className="imageCell"> <img src={imageee} alt="" /></td>
-                        <td className="color">productName</td>
-                        <td className="color">200$</td>
-                        <td className="quantity">3</td>
-                        <td>200$</td>
-                        <td className="basket"><img src={basket} /></td>
-                    </tr>
-
-                    {/* <tr className="responsive">
-                        <td className="imageCell"> <img src={imageee} alt="" /></td>
-                        <td className="color">productName</td>
-                        <td className="color">200$</td>
-                        <td className="quantity">3</td>
-                        <td>200$</td>
-                        <td className="basket"><img src={basket} /></td>
-                    </tr> */}
+                    {arrayOfProducts.map((item) => {
+                        return (
+                            <>
+                                <tr id="responsive"  key={item.id} >
+                                    <td className="imageCell"> <img src={item.productImg} alt="" /></td>
+                                    <td className="color">{item.productName}</td>
+                                    <td className="color">{item.price}$</td>
+                                    <td className="quantity">{item.amount}</td>
+                                    <td>{item.price}</td>
+                                    <td className="basket"><img src={basket} id={item.id} onClick={deletePost} /></td>
+                                </tr>
+                            </>
+                        )
+                    })}
                 </table>
                 <div className="cartTotal">
                     <h1>Cart Total</h1>

@@ -1,10 +1,10 @@
 import "./cart.css";
-import image from "/images/Untitled design/2.png";
+// import image from "/images/Untitled design/2.png";
 import closeImg from "/images/Untitled design/close.svg";
 import { Link } from "react-router-dom";
 import CartImg from "/images/Vector.png";
 import exitImage from "/images/share/Group.svg";
-import { useState } from "react";
+import { useState} from "react";
 
 function Cart() {
     const [active, setActive] = useState(true);
@@ -14,11 +14,30 @@ function Cart() {
     function openItem() {
         setActive(false);
     }
+    const [arrayOfProducts, setArrayOfProducts] = useState([
+        {
+            id: 1,
+            productImg: "/images/Untitled design/3.png",
+            productName: "t-shirt",
+            amount: "4",
+            price: "200$",
+        },
+        {
+            id: 2,
+            productImg: "/images/Untitled design/2.png",
+            productName: "pants",
+            amount: "2",
+            price: "120$",
+        },
+    ])
 
 
-    const [deleteproduct , setDeleteproduct] = useState(false);
-    function deleteItem() {
-        setDeleteproduct(true);
+    function deletePost(event) {
+        console.log(event.target.id)
+        const newArrayAfterDelete = arrayOfProducts.filter((item) => {
+            return item.id != event.target.id
+        })
+        setArrayOfProducts(newArrayAfterDelete)
     }
 
 
@@ -34,34 +53,27 @@ function Cart() {
                         <img src={exitImage} alt="#" onClick={closeItem} />
                     </div>
                     <div id="dash"></div>
-                    <div id="cartListItems">
-                        <img className="imageInCart" src={image} alt="" />
-                        <div className="amount">
-                            <h6>product Name</h6>
-                            <span>
-                                1 x <p>34$</p>
-                            </span>
-                        </div>
-                        <div className="closee">
-                            <img src={closeImg} alt="" />
-                        </div>
-                    </div>
-
-                    <div id="cartListItems" className={deleteproduct ? "delete" : "keep"}>
-                        <img className="imageInCart" src={image} alt=""  onClick={deleteItem}/>
-                        <div className="amount">
-                            <h6>product uuuu uu uuuuuuu Name</h6>
-                            <span>
-                                1 x <p>34$</p>
-                            </span>
-                        </div>
-                        <div className="closee">
-                            <img src={closeImg} alt="" />
-                        </div>
-                    </div>
+                    {arrayOfProducts.map((item) => {
+                        return (
+                            <>
+                                <div id="cartListItems" key={item.id}>
+                                    <img className="imageInCart" src={item.productImg} alt="" />
+                                    <div className="amount">
+                                        <h6>{item.productName}</h6>
+                                        <span>
+                                            {item.amount} x <p>{item.price}</p>
+                                        </span>
+                                    </div>
+                                    <div className="closee">
+                                        <img src={closeImg} alt="" id={item.id} onClick={deletePost} />
+                                    </div>
+                                </div>
+                            </>
+                        )
+                    })}
                     <div className="subtotal">
                         <p>Subtotal</p>
-                        <h6>300$</h6>
+                        <h6 >200$</h6>
                     </div>
                     <div className="dash"></div>
                     <Link to={"/cart"}>

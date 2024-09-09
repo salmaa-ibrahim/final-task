@@ -1,26 +1,23 @@
 import { useParams } from "react-router-dom"
+import { useEffect, useState } from "react";
 import "./productPage.css";
-import imagee from "/images/Untitled design/2.png"
+// import imagee from "/images/Untitled design/2.png"
 import facebook from "/images/share/akar-icons_facebook-fill.svg"
 import linkedin from "/images/share/akar-icons_linkedin-box-fill.svg"
 import twitter from "/images/share/ant-design_twitter-circle-filled.svg"
-
 import Counter from "../counter/counter";
-// import { useEffect, useState } from "react";
 function ProductPage() {
-    const { id } = useParams(); //import from react-router-dom
+    const { id } = useParams();
+    const [product, setProduct] = useState([]);
 
-    // const [products, setProducts] = useState([])
-    // useEffect(() => {
-    //     function AllProducts() {
-    //         fetch("https://fakestoreapi.com/products/2").then(
-    //             (respose) => { return respose.json() }
-    //         ).then((finalResult) => { setProducts(finalResult) })
-    //     }
-    //     AllProducts();
-    // }, [])
+    useEffect(() => {
+        fetch(`https://fakestoreapi.com/products/${id}`)
+            .then((res) => res.json())
+            .then((res) => setProduct(res));
+    });
+    if (ProductPage) {
     return (
-        <>
+        <div>
             <div className="productPage">
                 <div className="product">
                     <div className="productHeader">
@@ -28,15 +25,16 @@ function ProductPage() {
                         <span> &gt; </span>
                         <p>Shop</p>
                         <span> &gt; </span>
-                        <h4>name</h4>
+                        <h4>{product.title}</h4>
                     </div>
                     <div className="productDiv">
                         <div className="productImg">
-                            <img src={imagee} alt="" />
+                            <img src={product.image} alt="" />
                         </div>
+
                         <div className="productDetails">
-                            <h1>Product Name</h1>
-                            <p>300$</p>
+                            <h1>{product.title}</h1>
+                            <p>{product.price}$</p>
                             <div className="stars">
                                 <span className="fa fa-star checked"></span>
                                 <span className="fa fa-star checked"></span>
@@ -45,7 +43,7 @@ function ProductPage() {
                                 <span className="fa fa-star"></span>
                             </div>
                             <div className="category">
-                                <p>Women clothing</p>
+                                <p>{product.category}</p>
                             </div>
                             <div className="counterAndBtn">
                                 <Counter></Counter>
@@ -53,8 +51,8 @@ function ProductPage() {
                             </div>
                             <div className="line"></div>
                             <div className="additionalInformation">
-                                <p> <p className="item">ID</p> : {id}</p>
-                                <p> <p className="item">Category</p> : women</p>
+                                <p> <p className="item">ID</p> : {product.id}</p>
+                                <p> <p className="item">Category</p> : {product.category}</p>
                                 <p> <p className="item">Share</p> :
                                     <img src={facebook} alt="" />
                                     <img src={linkedin} alt="" />
@@ -62,24 +60,21 @@ function ProductPage() {
                                 </p>
                             </div>
                         </div>
+
                     </div>
 
 
                 </div>
                 <div className="description">
                     <label>Decription</label>
-                    <p>
-                        Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn
-                        portable active stereo speaker takes the unmistakable look and sound
-                        of Marshall, unplugs the chords, and takes the show on the road.
-                        <br /> <br />
-
-                    </p>
+                    <p>{product.description}</p>
                 </div>
             </div>
-        </>
+
+
+        </div>
     )
 
 }
-
+}
 export default ProductPage;
