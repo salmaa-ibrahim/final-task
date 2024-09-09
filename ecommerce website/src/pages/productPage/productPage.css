@@ -34,6 +34,12 @@
     font-weight: 600;
 }
 
+.productHeader h4{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .productDiv{
     display: flex;
     width: 80%;
