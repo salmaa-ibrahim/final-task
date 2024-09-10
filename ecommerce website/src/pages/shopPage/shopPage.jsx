@@ -1,7 +1,6 @@
 import "./shopPage.css"
 // import { Link } from "react-router-dom"
 import HeaderImage from "/images/Untitled design/page.png";
-// import ShopImg from "/images/Untitled design/B2.png"
 import ProductCard from "../productCardInShop/productCardInShop"
 import { useEffect, useState } from 'react'
 
@@ -32,8 +31,7 @@ function ShopPage(){
                     return(
                     <>
                     <ProductCard
-                    // data = {product}
-                    key ={product.id}
+                    id={product.id}
                     image={product.image}
                     title={product.title}
                     price ={product.price}
@@ -50,6 +48,7 @@ function ShopPage(){
                 <button className="pageNumberBtns"> 3 </button>
                 <button className="pageNumberBtns"> next </button>
             </div>
+
         </div>
     )
 }

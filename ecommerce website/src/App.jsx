@@ -10,11 +10,10 @@ import Electronics from './pages/categories/electronics';
 import Jewelery from './pages/categories/jewelery';
 import Men from './pages/categories/men';
 import Women from './pages/categories/women';
-import { ShopContextProvider } from './context/shop-context';
 function App() {
 
   return (
-    <ShopContextProvider>
+    <>
       <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -30,7 +29,7 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
-    </ShopContextProvider>
+    </>
   )
 }
 

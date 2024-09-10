@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react";
 import "./productPage.css";
-// import imagee from "/images/Untitled design/2.png"
 import facebook from "/images/share/akar-icons_facebook-fill.svg"
 import linkedin from "/images/share/akar-icons_linkedin-box-fill.svg"
 import twitter from "/images/share/ant-design_twitter-circle-filled.svg"
