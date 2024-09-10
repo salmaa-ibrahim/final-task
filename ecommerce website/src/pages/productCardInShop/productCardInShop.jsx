@@ -2,6 +2,9 @@ import "./productCardInShop.css"
 import { Link } from "react-router-dom"
 function ProductCard(prop){
 
+    function AddToCart(){
+        console.log("fire")
+    }
 
     return(
         <>
@@ -9,7 +12,7 @@ function ProductCard(prop){
                     <div className="productImgInShop">
                         <img className="cardImage" src={prop.image} alt="" />
                         <div className="middleButton">
-                            <p>Add to cart</p>
+                            <p onClick={AddToCart}>Add to cart</p>
                         </div>
                     </div>
                     <Link to={`/product/${prop.id}`}>
