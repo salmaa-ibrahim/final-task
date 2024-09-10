@@ -32,7 +32,8 @@ function ShopPage(){
                     return(
                     <>
                     <ProductCard
-                    id={product.id}
+                    // data = {product}
+                    key ={product.id}
                     image={product.image}
                     title={product.title}
                     price ={product.price}
@@ -49,7 +50,6 @@ function ShopPage(){
                 <button className="pageNumberBtns"> 3 </button>
                 <button className="pageNumberBtns"> next </button>
             </div>
-
         </div>
     )
 }
